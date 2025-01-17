@@ -31,7 +31,7 @@ const TodoApp = () => {
 			setError("");
 			setTasks([
 				...tasks,
-				{ id: tasks.length + 1, taskName: newTask, completed: false, date: new Date().toISOString() },
+				{ id: tasks.length, taskName: newTask, completed: false, date: new Date().toISOString() },
 			]);
 			setNewTask("");
 		}
