@@ -37,14 +37,12 @@ const TodoApp = () => {
 		}
 	};
 
-	const handleRemoveTask = (index: number) => {
-		setTasks((prev: task[]) => {
-			const updatedTasks = [...prev];
-			const newTasks = updatedTasks.filter((_, i) => {
-				return i !== index;
-			});
-			return newTasks;
-		});
+	const handleRemoveTask = (id: number) => {
+		setTasks(
+			tasks.filter((each) => {
+				return each.id !== id;
+			})
+		);
 	};
 
 	return (
